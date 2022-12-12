@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Did you win the lottery?</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <h1>Did you win the lottery?</h1>
+    <div class="button-div">
+        <button onclick="roll()">Roll</button>
+    </div>
+
+    <p>Your ticket is: </p><h2 id="random-number"></p>
+
+    <h1 id="status"></h1>
+
+    <p id="show"></p>
+
+    <script>
+
+        function youwin() {
+            document.getElementById("status").innerHTML = "You win! Congratulations on exploiting millions of people!";
+            const element = document.querySelector('body');
+            element.style.backgroundColor = 'green';
+        }
+
+        function youlose() {
+            document.getElementById("status").innerHTML = "You lose, try again.";
+            const element = document.querySelector('body');
+            element.style.backgroundColor = 'red';
+            document.getElementById("show").innerHTML = "Don't feel bad, you had a 1 in 16 million chance!";
+        }
+
+        function roll() {
+                                                        // 8 billion
+            var randomNumber = Math.floor(Math.random() * 8000000000);
+            document.getElementById("random-number").innerHTML = randomNumber + " out of 8000000000";
+            
+            if (randomNumber <= 500) {
+                youwin();
+            }
+            else {
+                youlose();
+            }
+
+        }
+        
+    </script>
+
+</body>
+</html>

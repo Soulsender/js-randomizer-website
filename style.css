@@ -1,0 +1,20 @@
+body {
+    margin:0;
+    height:100%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    /* background-image: url('./roboteye.jpg');
+    background-size:cover;
+    background-repeat: no-repeat; */
+    background-color: gray;
+}
+
+h1,h2,h3,p {
+    text-align: center;
+    color: white;
+}
+
+.button-div {
+    text-align: center;
+}
+  
+  
